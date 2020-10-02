@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Гостиницы</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Цена от</ion-label>
+      <ion-input type="number" text-right id="input1" [(ngModel)]="inputValue1"
+                 (ionChange)="filterSearch()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Цена до</ion-label>
+      <ion-input type="number" text-right id="input2" [(ngModel)]="inputValue2"
+                 (ionChange)="filterSearch()"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Наличие парковки</ion-label>
+      <ion-checkbox color="dark" checked="true" [(ngModel)]="checked" (ionChange)="filterSearch()"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item *ngFor="let data of arr" (click)="openPostPage(data)">
+      <ion-avatar item-start>
+        <img src="{{data.imageUrl}}">
+      </ion-avatar>
+      <h2>{{data.title}}</h2>
+      <p>{{data.address}}</p>
+      <p>{{data.roomCost}}</p>
+    </button>
+  </ion-list>
+
+</ion-content>
+
+

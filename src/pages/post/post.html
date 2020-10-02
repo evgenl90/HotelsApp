@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Гостиницa "{{this.Item.title}}"</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="content-post">
+    <div>
+      <img src="{{this.Item.imageUrl}}">
+    </div>
+    <div class="content-post-text">
+      <p><b>Описание: </b> {{this.Item.description}}</p>
+      <p><b>Адрес: </b> {{this.Item.address}}</p>
+      <p><b>Телефон: </b> {{this.Item.phone}}</p>
+      <p><b>Стоимость номера: </b>{{this.Item.roomCost}} рублей за ночь</p>
+      <p><b>Парковка: </b>{{this.parking}}</p>
+    </div>
+  </div>
+
+
+
+  <!--<ion-list>
+    <button ion-item *ngFor="let hotel of hotels">
+      <ion-avatar item-start>
+        <img src="{{hotel.imageUrl}}">
+      </ion-avatar>
+      <h2>{{hotel.title}}</h2>
+      <p>{{hotel.address}}</p>
+    </button>
+  </ion-list>-->
+</ion-content>
+
+

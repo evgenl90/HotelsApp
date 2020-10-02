@@ -1,0 +1,20 @@
+page-post{
+  .content-post{
+    padding: 50px;
+    display: flex;
+  }
+  .content-post>div>img{
+    margin-right: 30px;
+  }
+  @media screen and (max-width: 1000px) {
+    .content-post{
+      padding: 20px;
+      display: block;
+      text-align: center;
+    }
+    .content-post-text{
+      text-align: left;
+    }
+  }
+
+}
